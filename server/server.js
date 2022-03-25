@@ -15,6 +15,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 
-app.listen(process.env.PORT, () => {
-  console.log(`server startes at port ${process.env.PORT}`);
+app.listen(process.env.PORT || process.env.LOCALPORT, () => {
+  console.log(`server started at port ${process.env.PORT}`);
 });
